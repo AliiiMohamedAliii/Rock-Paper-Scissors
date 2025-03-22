@@ -65,7 +65,6 @@ def get_localized_text(language):
         "English": {
             "title": "Rock-Paper-Scissors Game ✊✋✌️",
             "choose": "Choose one and play against the computer!",
-            "theme": "Select Theme:",
             "difficulty": "Select Difficulty:",
             "game_mode": "Choose Game Mode:",
             "your_choice": "Your Choice:",
@@ -83,9 +82,6 @@ def get_localized_text(language):
             "best_of_3": "Best of 3",
             "best_of_5": "Best of 5",
             "sudden_death": "Sudden Death",
-            "classic": "Classic",
-            "dark_mode": "Dark Mode",
-            "funny_mode": "Funny Mode",
             "easy": "Easy",
             "medium": "Medium",
             "hard": "Hard",
@@ -103,7 +99,6 @@ def get_localized_text(language):
         "Arabic": {
             "title": "لعبة حجر-ورقة-مقص ✊✋✌️",
             "choose": "اختر واحدًا والعب ضد الكمبيوتر!",
-            "theme": "اختر السمة:",
             "difficulty": "اختر مستوى الصعوبة:",
             "game_mode": "اختر نمط اللعبة:",
             "your_choice": "اختيارك:",
@@ -121,9 +116,6 @@ def get_localized_text(language):
             "best_of_3": "أفضل من 3",
             "best_of_5": "أفضل من 5",
             "sudden_death": "الجولة الحاسمة",
-            "classic": "كلاسيكي",
-            "dark_mode": "الوضع الداكن",
-            "funny_mode": "الوضع المضحك",
             "easy": "سهل",
             "medium": "متوسط",
             "hard": "صعب",
@@ -141,7 +133,6 @@ def get_localized_text(language):
         "French": {
             "title": "Jeu Pierre-Papier-Ciseaux ✊✋✌️",
             "choose": "Choisissez une option et jouez contre l'ordinateur!",
-            "theme": "Sélectionnez le thème:",
             "difficulty": "Sélectionnez la difficulté:",
             "game_mode": "Choisissez le mode de jeu:",
             "your_choice": "Votre choix:",
@@ -159,9 +150,6 @@ def get_localized_text(language):
             "best_of_3": "Meilleur de 3",
             "best_of_5": "Meilleur de 5",
             "sudden_death": "Mort subite",
-            "classic": "Classique",
-            "dark_mode": "Mode sombre",
-            "funny_mode": "Mode drôle",
             "easy": "Facile",
             "medium": "Moyen",
             "hard": "Difficile",
@@ -195,11 +183,6 @@ if 'achievements' not in st.session_state:
 # Title
 st.title(text["title"])
 st.write(text["choose"])
-
-# Theme Selection
-col1, col2 = st.columns([3, 1])
-with col2:
-    theme = st.selectbox(text["theme"], [text["classic"], text["dark_mode"], text["funny_mode"]])
 
 # Difficulty Selection
 difficulty = st.selectbox(text["difficulty"], [text["easy"], text["medium"], text["hard"]])
